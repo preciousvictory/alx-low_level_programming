@@ -13,7 +13,7 @@ int main(void)
 	c = 'a';
 	while (i <= 10)
 	{
-		putchar(i);
+		putchr(48 + i);
 		i++;
 	}
 	while (c <= 'f')
