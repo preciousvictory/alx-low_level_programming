@@ -8,10 +8,10 @@ int main(void)
 {
 	int i;
 
-	i = 48;
+	i = 0;
 	while (i < 10)
 	{
-		putchar((i % 10));
+		putchar(48 + i);
 		i++;
 	}
 	putchar('\n');
