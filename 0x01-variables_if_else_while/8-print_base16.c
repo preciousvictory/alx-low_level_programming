@@ -13,12 +13,12 @@ int main(void)
 	c = 'a';
 	while (i <= 10)
 	{
-		putchar(c);
+		putchar(i);
 		i++;
 	}
 	while (c <= 'f')
 	{
-		putchar(u);
+		putchar(c);
 		c++;
 	}
 	putchar('\n');
