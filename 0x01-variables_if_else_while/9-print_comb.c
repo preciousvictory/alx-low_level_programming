@@ -11,15 +11,13 @@ int main(void)
 	int i;
 
 	i = 0;
-	while (i < 10)
+	while (i < 9)
 	{
 		putchar(48 + i);
 		putchar(44);
-		if (i != 9)
-		{
-			putchar(32);
-		}
+		putchar(32);
 		i++;
 	}
+	putchar(39);
 	return (0);
 }
