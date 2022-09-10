@@ -25,14 +25,14 @@ while (i < 10)
 			l = 0;
 			while (l < 10)
 				{
-				if (!(i == k) && (j == l))
+				if (!(l == i) && (k == j))
 				{
 					putchar(48 + i);
 					putchar(48 + j);
 					putchar(32);
 					putchar(48 + k);
 					putchar(48 + l);
-					if ((i + j) != 18)
+					if (((i + j) != 17) && ((k + l) != 18))
 					{
 					putchar(44);
 					putchar(32);
