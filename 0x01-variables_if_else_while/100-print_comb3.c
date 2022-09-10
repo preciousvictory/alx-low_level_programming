@@ -17,12 +17,15 @@ int main(void)
 		j = 1;
 		while (j < 10)
 		{
-			putchar(48 + i);
-			putchar(48 + j);
-			if ((i != 8) && (j != 9))
+			if ((i != j) || ((i + j) != (j + i)))
 			{
-				putchar(44);
-				putchar(32);
+				putchar(48 + i);
+				putchar(48 + j);
+				if ((i != 8) && (j != 9))
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
 			j++;
 		}
