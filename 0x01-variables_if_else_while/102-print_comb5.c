@@ -32,8 +32,7 @@ while (i < 10)
 					putchar(32);
 					putchar(48 + k);
 					putchar(48 + l);
-					if (!(i + j == 17 &&
-						\ k + l == 18 && d = 9))
+					if (!(i + j == 17 && k + l == 18 && d = 9))
 					{
 					putchar(44);
 					putchar(32);
