@@ -12,9 +12,9 @@ int main(void)
 	int j;
 
 	i = 0;
-	j = 1;
 	while (i < 9)
 	{
+		j = 1;
 		while (j < 10)
 		{
 			putchar(48 + i);
@@ -26,6 +26,7 @@ int main(void)
 			}
 			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
