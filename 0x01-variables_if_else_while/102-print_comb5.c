@@ -45,7 +45,7 @@ while (i < 10)
 		j++;
 	}
 	i++;
-
+}
 putchar('\n');
 return (0);
 }
