@@ -21,7 +21,7 @@ int main(void)
 			{
 				putchar(48 + i);
 				putchar(48 + j);
-				if ((i != 8) && (j != 9))
+				if ((i + j) != 89)
 				{
 					putchar(44);
 					putchar(32);
