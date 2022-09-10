@@ -22,18 +22,22 @@ int main(void)
 			k = 0;
 			while (k < 10)
 			{
-				l = 1;
+				l = 0;
 				while (l < 10)
 				{
-					putchar(48 + i);
-					putchar(48 + j);
-					putchar(32);
-					putchar(48 + k);
-					putchar(48 + l);
-					if ((i + j) != 18)
+					if (!(i == j == k == l) && \
+							((i + j) > (k+ l)))
 					{
-						putchar(44);
+						putchar(48 + i);
+						putchar(48 + j);
 						putchar(32);
+						putchar(48 + k);
+						putchar(48 + l);
+						if ((i + j) != 18)
+						{
+							putchar(44);
+							putchar(32);
+						}
 					}
 					l++;
 				}
