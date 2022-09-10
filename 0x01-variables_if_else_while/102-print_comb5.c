@@ -22,7 +22,7 @@ int main(void)
 			k = 0;
 			while (k < 10)
 			{
-				l = 0;
+				l = 1;
 				while (l < 10)
 				{
 					putchar(48 + i);
