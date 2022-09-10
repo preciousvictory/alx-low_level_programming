@@ -13,14 +13,18 @@ int main(void)
 
 	i = 0;
 	j = 1;
-	while (i < 10)
+	while (i < 9)
 	{
 		while (j < 10)
 		{
 			putchar(48 + i);
-			putchar(44);
-			putchar(32);
-			j++;
+			putchar(49 + i);
+			if ( (i != 8) && (j != 9))
+			{
+				putchar(44);
+				putchar(32);
+			}
+			j++;		
 		}
 		i++;
 	}
