@@ -10,6 +10,8 @@ int main(void)
 {
 	int i;
 	int j;
+	int k;
+	int l;
 
 	i = 0;
 	while (i < 10)
@@ -17,12 +19,25 @@ int main(void)
 		j = 0;
 		while (j < 10)
 		{
-			putchar(48 + i);
-			putchar(48 + j);
-			if ((i + j) != 18)
+			k = 0;
+			while (k < 10)
 			{
-				putchar(44);
-				putchar(32);
+				l = 0;
+				while (l < 10)
+				{
+					putchar(48 + i);
+					putchar(48 + j);
+					putchar(32);
+					putchar(48 + k);
+					putchar(48 + l);
+					if ((i + j) != 18)
+					{
+						putchar(44);
+						putchar(32);
+					}
+					l++;
+				}
+				k++;
 			}
 			j++;
 		}
