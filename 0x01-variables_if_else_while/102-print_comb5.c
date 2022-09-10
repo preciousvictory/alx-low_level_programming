@@ -25,7 +25,7 @@ int main(void)
 				l = 0;
 				while (l < 10)
 				{
-					if (!(i == (i && j && k && l)))
+					if (!(i == k) and (j == l))
 					{
 						putchar(48 + i);
 						putchar(48 + j);
