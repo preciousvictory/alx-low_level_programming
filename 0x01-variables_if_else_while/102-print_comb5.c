@@ -25,7 +25,7 @@ while (i < 10)
 			l = 0;
 			while (l < 10)
 				{
-				if (!(l == i) && (k == j))
+				if ((!(l == i)) && (!(k == j)))
 				{
 					putchar(48 + i);
 					putchar(48 + j);
