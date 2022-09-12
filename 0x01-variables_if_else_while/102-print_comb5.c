@@ -19,14 +19,14 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					if (!(f == c && e == d))
+					if (!(a == d && b == c))
 					{
 						putchar(a + '0');
 						putchar(b + '0');
 						putchar(' ');
 						putchar(c + '0');
 						putchar(d + '0');
-						if (!(a + d == 17 && b + c == 18 && d == 9))
+						if (!(a + b == 17 && d + c == 18 && d == 9))
 						{
 							putchar(',');
 							putchar(' ');
