@@ -23,23 +23,20 @@ while (a < 10)
 			d = 0;
 			while (d < 10)
 			{
-				if (!(a == d && b == c))
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(' ');
+				putchar(c + '0');
+				putchar(d + '0');
+				if (!(a + b == 17 && d + c == 18 && d == 9))
 				{
-					putchar(a + '0');
-					putchar(b + '0');
+					putchar(',');
 					putchar(' ');
-					putchar(c + '0');
-					putchar(d + '0');
-					if (!(a + b == 17 && d + c == 18 && d == 9))
-					{
-						putchar(',');
-							putchar(' ');
-					}
 				}
 				d++;
 			}
-		c++;
-			}
+			c++;
+		}
 		b++;
 	}
 	a++;
