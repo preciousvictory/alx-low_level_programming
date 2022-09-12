@@ -11,13 +11,17 @@ int main(void)
 	int c;
 	int d;
 
-	for (a = 0; a < 10; a++)
+	a = 0;
+	while (a < 0)
 	{
-		for (b = 0; b < 10; b++)
+		b = 0;
+		while (b < 10)
 		{
-			for (c = 0; c < 10; c++)
+			c =  0;
+			while (c < 10)
 			{
-				for (d = 0; d < 10; d++)
+				d = 0;
+				while (d < 10)
 				{
 					if (!(a == d && b == c))
 					{
@@ -26,15 +30,19 @@ int main(void)
 						putchar(' ');
 						putchar(c + '0');
 						putchar(d + '0');
-						if (!(a + b == 17 && d + c == 18 && d == 9))
+						if (a + b != 17 && d + c != 18 && d != 9)
 						{
 							putchar(',');
 							putchar(' ');
 						}
 					}
+					d++;
 				}
+				c++;
 			}
+			b++;
 		}
+		a++;
 	}
 	return (0);
 }
