@@ -26,7 +26,7 @@ for (a = 0; a < 10; a++)
 					putchar(' ');
 					putchar(48 + c);
 					putchar(48 + d);
-					if (!(a + b == 17 && c + d == 18 && d == 9))
+					if (!(a + b == 17 && c + d == 18 && d == 9 && a == 9))
 					{
 						putchar(44);
 						putchar(' ');
