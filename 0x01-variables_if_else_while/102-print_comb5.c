@@ -11,39 +11,32 @@ int b;
 int c;
 int d;
 
-a = 0;
-while (a < 10)
+for (a = 0; a < 10; a++)
 {
-	b = 0;
-	while (b < 10)
+	for (b = 0; b < 10; b++)
 	{
-		c =  0;
-		while (c < 10)
+		for (c = 0; c < 10; c++)
 		{
-			d = 0;
-			while (d < 10)
+			for (d = 0; d < 10; d++)
 			{
-				if (((d + c) > (a + b) && (d >= a)) || a < d )
+				if (((c + d) > (a + b) &&  c >= a) || a < c)
 				{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(' ');
-				putchar(c + '0');
-				putchar(d + '0');
-				if (!(a + b == 17 && d + c == 18 && d == 9))
-				{
-					putchar(',');
+					putchar(48 + a);
+					putchar(48 + b);
 					putchar(' ');
+					putchar(48 + c);
+					putchar(48 + d);
+					if (!(a + b == 17 && c + d == 18 && d == 9))
+					{
+						putchar(44);
+						putchar(' ');
+					}
 				}
-				}
-				d++;
 			}
-			c++;
 		}
-		b++;
 	}
-	a++;
 }
+
 putchar('\n');
 return (0);
 }
