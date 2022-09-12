@@ -23,6 +23,8 @@ while (a < 10)
 			d = 0;
 			while (d < 10)
 			{
+				if ((a + b) < (c + d) && (c > a))
+				{
 				putchar(a + '0');
 				putchar(b + '0');
 				putchar(' ');
@@ -32,6 +34,7 @@ while (a < 10)
 				{
 					putchar(',');
 					putchar(' ');
+				}
 				}
 				d++;
 			}
