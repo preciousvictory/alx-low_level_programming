@@ -15,20 +15,23 @@ int main(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			for (c = 0 c < 10; c++)
+			for (c = 0; c < 10; c++)
 			{
 				for (d = 0; d < 10; d++)
 				{
 					if (!(a == c && b != d && (a + b) < (c + d)))
+					{
 						putchar(a + '0');
 						putchar(b + '0');
 						putchar(' ');
 						putchar(c + '0');
 						putchat(d + '0');
 						if (!(a + b == 17 && c + d == 18 && d == 9))
+						{
 							putchar(',');
 							putchar(' ');
-
+						}
+					}
 				}
 			}
 		}
