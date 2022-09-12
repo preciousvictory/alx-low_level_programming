@@ -1,51 +1,37 @@
 #include <stdio.h>
 /**
- * main -prints all single digit numbers of base 10 starting from 0
- *
- * separated by ,
- * Numbers should be printed in ascending order
+ * main - prints all single digit numbers of base 10 starting from 0
+ * 
  * Return: 0 (success)
  */
 int main(void)
 {
-int i;
-int j;
-int k;
-int l;
-
-i = 0;
-while (i < 10)
-{
-	j = 0;
-	while (j < 10)
+	int a;
+	int b;
+	int c;
+	int d;
+	
+	for (a = 0, a < 10, a++)
 	{
-		k = 0;
-		while (k < 10)
+		for (b = 0, b < 10, b++)
 		{
-			l = 0;
-			while (l < 10)
+			for (c = 0, c < 10, c++)
+			{
+				for (d = 0. d < 10, d++)
 				{
-				if (!(l == i && k == j))
-				{
-					putchar(48 + i);
-					putchar(48 + j);
-					putchar(32);
-					putchar(48 + k);
-					putchar(48 + l);
-					if (!(i + j == 17 && k + l == 18 && l == 9))
-					{
-					putchar(44);
-					putchar(32);
-					}
+					if (!(a == c && b != d && (a + b) < (c + d)))
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(' ');
+						putchar(c + '0');
+						putchat(d + '0');
+						if (!(a + b == 17 && c + d == 18 && d == 9))
+							putchar(',');
+							putchar(' ');
+
 				}
-				l++;
 			}
-			k++;
 		}
-		j++;
 	}
-	i++;
-}
-putchar('\n');
-return (0);
+	return (0);
 }
