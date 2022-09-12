@@ -23,7 +23,7 @@ while (a < 10)
 			d = 0;
 			while (d < 10)
 			{
-				if ((a + b) < (c + d) && (c > a))
+				if ((d + c) > (a + b) && (d >= a))
 				{
 				putchar(a + '0');
 				putchar(b + '0');
