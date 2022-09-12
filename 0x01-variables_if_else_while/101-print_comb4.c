@@ -9,7 +9,6 @@ int main(void)
 int a;
 int b;
 int c;
-int d;
 
 for (a = 0; a < 10; a++)
 {
@@ -22,7 +21,7 @@ for (a = 0; a < 10; a++)
 				putchar(48 + a);
 				putchar(48 + b);
 				putchar(48 + c);
-				if (!(a + b + c = 24 && c = 9))
+				if (!(a + b + c == 24 && c == 9))
 				{
 					putchar(44);
 					putchar(' ');
