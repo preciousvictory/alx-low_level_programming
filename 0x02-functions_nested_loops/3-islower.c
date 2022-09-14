@@ -7,18 +7,13 @@
  */
 int _islower(int c)
 {
-	int r, j;
-
-	for (j = 97; j <= 122; j++)
+	if (c >= 97 && c <= 122)
 	{
-		if (j == c)
-		{
-			r = 1;
-		}
-		else if (j != c)
-		{
-			r = 0;
-		}
+		r = 1;
+	}
+	else
+	{
+		r = 0;
 	}
 	return (r);
 }
