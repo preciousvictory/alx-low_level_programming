@@ -7,13 +7,14 @@
  */
 int _islower(int c)
 {
-	
+	char i;	
 	int j = 97;
 	int r;
 
-	while (j <= 122)
+	i = 'a';
+	while (j <= 122 || i <= 'z')
 	{
-		if (c == j)
+		if (c == j || c == i)
 		{
 			r = 1;
 		}
