@@ -11,7 +11,7 @@ int _islower(int c)
 	int j = 97;
 	int r;
 
-	while (j <= 122 ||  <= 'z')
+	while (j <= 122 || i <= 'z')
 	{
 		if (c == j || c == i)
 		{
