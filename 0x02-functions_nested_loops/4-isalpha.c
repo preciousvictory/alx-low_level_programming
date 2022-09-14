@@ -1,6 +1,6 @@
 #include <stdio.h>
-/** 
- * int _isalpha - (int c)
+/**
+ * _isalpha - (int c)
  * @c: parameter checked
  *
  * Return: 0( success)
