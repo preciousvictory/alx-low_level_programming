@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * main - print if s mumber is positive or negative
- *
- * Return: 0(success)
+ * Return: 0 (success)
  */
+
 int main(void)
 {
 	int n;
