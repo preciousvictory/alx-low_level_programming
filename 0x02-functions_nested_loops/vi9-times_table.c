@@ -2,11 +2,11 @@
 #include "main.h"
 /**
  * times_table - (void)
- *
  * Return: 0(success)
  */
 void times_table(void)
 {
+
 	int i;
 	int j;
 	int m;
@@ -15,22 +15,26 @@ void times_table(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			m = i * j;
-			if (m < 10)
-			{
-				putchar(' ');
-				putchar(48 + m);
-			}
-			else if (m > 9)
-			{
-				putchar(48 + m / 10);
-				putchar(48 + m % 10);
-			}
-			if (!(j == 9))
+			if (m > 9)
 			{
 				putchar(',');
 				putchar(' ');
+				putchar(48 + m / 10);
+				putchar(48 + m % 10);
+
 			}
+			else
+			{
+				if (!(j == 0))
+				{
+					putchar(',');
+					putchar(' ');
+					putchar(' ');
+
+				}
+				putchar(48 + m);
+			}
+
 		}
 	}
 }
