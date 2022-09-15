@@ -13,15 +13,5 @@ int add(int a, int b)
 
 	sum = a + b;
 
-	if (sum < 10)
-	{
-		putchar(sum);
-	}
-	else
-	{
-		putchar(48 + sum / 10);
-		putchar(48 + sum % 10);
-	}
-	putchar('\n');
-	return (0);
+	return (sum);
 }
