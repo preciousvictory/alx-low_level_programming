@@ -23,4 +23,5 @@ int add(int a, int b)
 		putchar(48 + sum % 10);
 	}
 	putchar('\n');
+	return (0);
 }
