@@ -18,7 +18,7 @@ void times_table(void)
 			m = i * j;
 			if (m < 10)
 			{
-
+				putchar(' ');
 				putchar(48 + m);
 			}
 			else if (m > 9)
