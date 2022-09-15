@@ -7,9 +7,9 @@
  *
  * Return: 0 (success
  */
-nt add(int a, int b)
+int add(int a, int b)
 {
-	sum ;
+	sum;
 
 	sum = a + b;
 
