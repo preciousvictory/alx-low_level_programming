@@ -32,7 +32,8 @@ void largest_prime(long int num)
 	printf("%d", prime);
 }
 
-/* main - a program that finds and prints the largest
+/**
+ * main - a program that finds and prints the largest
  * prime factor of the number 612852475143, followed by a new line.
  *
  * Return: 0 (success)
