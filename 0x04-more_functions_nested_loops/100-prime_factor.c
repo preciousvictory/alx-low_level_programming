@@ -7,7 +7,7 @@
  *
  * @num: number checked
  */
-void largest_prime(int num)
+void largest_prime(long int num)
 {
 	int i, prime;
 
