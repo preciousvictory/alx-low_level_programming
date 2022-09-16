@@ -10,7 +10,7 @@
 void largest_prime(long int num)
 {
 	int i, prime;
-	
+
 	/* To get all the least number that is not a multiple of 2 */
 	/* Since any number divided by 2 is even */
 	while (num % 2 == 0)
