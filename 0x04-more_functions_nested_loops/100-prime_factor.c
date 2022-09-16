@@ -39,7 +39,7 @@ void largest_prime(int num)
  */
 int main(void)
 {
-	largest_prime(1231952);
+	largest_prime(612852475143);
 	printf("\n");
 
 	return (0);
