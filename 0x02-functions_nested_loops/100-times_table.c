@@ -15,8 +15,7 @@ int print_number(int num)
 	{
 		o = print_number(num / 10);
 	}
-	putchar(o);
-	return (1); 
+	return (0);
 }
 
 
@@ -40,11 +39,7 @@ void print_times_table(int n)
 
 				if (m > 9)
 				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar(48 + print_number(m));
-					putchar(48 + m % 10);
+					printf(",  %d", m);
 				}
 				else
 				{
