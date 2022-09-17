@@ -13,7 +13,7 @@ int print_number(int num)
 	{
 		print_number(num / 10);
 	}
-	return (48 + num % 10);
+	return (48 + (num % 10));
 }
 
 
