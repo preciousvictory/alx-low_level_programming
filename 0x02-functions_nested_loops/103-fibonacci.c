@@ -25,6 +25,6 @@ int main(void)
 		num_1 = num_2;
 		num_2 = next_num;
 	}
-	putchar('\n');
+	printf("%ld\n", sum);
 	return (0);
 }
