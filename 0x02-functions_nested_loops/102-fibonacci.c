@@ -8,16 +8,16 @@
  */
 int main(void)
 {
-	int i, num_1, num_2, sum;
+	long int i, num_1, num_2, sum;
 
 	num_1 = 1;
 	num_2 = 2;
-	printf("%d, %d, ", num_1, num_2);
+	printf("%ld, %ld, ", num_1, num_2);
 
 	for (i = 0; i < 50; i++)
 	{
 		sum = num_1 + num_2;
-		printf("%lu, ", (unsigned long)sum);
+		printf("%ld, ", sum);
 
 		num_1 = num_2;
 		num_2 = sum;
