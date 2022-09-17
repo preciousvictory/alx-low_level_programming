@@ -12,12 +12,9 @@ void sum_of_multiples(int n)
 
 	for (i = 0; i < n; i++)
 	{
-		sum = 0;
-
 		if (i % 3 == 0 || i % 5 == 0)
 		{
-			sum = sum + i;
-			printf("%d, ", i);
+			sum = i + sum;
 		}
 	}
 	printf("%d", sum);
