@@ -16,7 +16,7 @@ int print_number(int num)
 		o = print_number(num / 10);
 	}
 	putchar(o);
-	/* return (o); */
+	return (1); 
 }
 
 
