@@ -12,12 +12,12 @@ int main(void)
 
 	num_1 = 1;
 	num_2 = 2;
-	prinf("%d, %d, ", num_1, num_2);
+	printf("%d, %d, ", num_1, num_2);
 
 	for (i = 0; i < 50; i++)
 	{
 		sum = num_1 + num_2;
-		prinf("%d, ", sum)
+		prinf("%d, ", sum);
 		num_1 = num_2;
 		num_2 = sum;
 	}
