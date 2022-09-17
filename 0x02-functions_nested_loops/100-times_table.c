@@ -1,25 +1,6 @@
 #include "main.h"
 
 /**
- * print_number - a function that prints number
- * @num: The number
- *
- * Return: it returns the number
- */
-
-int print_number(int num)
-{
-	int o;
-
-	if ((num / 10) > 9)
-	{
-		o = print_number(num / 10);
-	}
-	return (0);
-}
-
-
-/**
  * print_times_table -  a function that prints the n times table,
  * starting with 0.
  * @n: The number
