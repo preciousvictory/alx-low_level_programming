@@ -7,7 +7,7 @@
 
 void print_number(int num)
 {
-	if (num / 10 > 9)
+	if (num / 10 > 0)
 	{
 		print_number(num / 10);
 	}
