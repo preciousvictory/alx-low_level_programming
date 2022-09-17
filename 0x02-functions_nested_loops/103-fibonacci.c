@@ -23,7 +23,7 @@ int main(void)
 		}
 
 		num_1 = num_2;
-		num_2 = next_num,;
+		num_2 = next_num;
 	}
 	putchar('\n');
 	return (0);
