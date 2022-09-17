@@ -1,5 +1,20 @@
 #include "main.h"
 
+/** 
+ * print_number - a function that prints number
+ * @num: The number
+ */
+
+void print_number(int num)
+{
+	if (num / 10 > 9)
+	{
+		print_number(num / 10);
+	}
+	_putchar(48 + num % 10);
+}
+
+
 /**
  * print_times_table -  a function that prints the n times table,
  * starting with 0.
@@ -23,8 +38,7 @@ void print_times_table(int n)
 					putchar(',');
 					putchar(' ');
 					putchar(' ');
-					putchar(48 + m / 10);
-					putchar(48 + m % 10);
+					print_number(m);
 				}
 				else
 				{
