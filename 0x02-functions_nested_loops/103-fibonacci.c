@@ -8,22 +8,22 @@
  */
 int main(void)
 {
-	long int num_1, num_2, sum;
+	long int num_1, num_2, next_num, sum;
 
 	num_1 = 1;
 	num_2 = 2;
-	printf("%ld, %ld, ", num_1, num_2);
+	sum = num_1 + num_2;
 
-	while (sum < 4000000)
+	while (sum <= 4000000)
 	{
-		sum = num_1 + num_2;
-		if (sum % 2 == 0)
+		next_num = num_1 + num_2;
+		if (next_num % 2 == 0)
 		{
-			printf("%ld, ", sum);
+			sum = sum + next_num;
 		}
 
 		num_1 = num_2;
-		num_2 = sum;
+		num_2 = next_num,;
 	}
 	putchar('\n');
 	return (0);
