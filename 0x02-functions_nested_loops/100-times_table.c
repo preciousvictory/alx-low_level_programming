@@ -1,17 +1,19 @@
 #include "main.h"
 
-/** 
+/**
  * print_number - a function that prints number
  * @num: The number
+ *
+ * Return: it returns the number
  */
 
-void print_number(int num)
+int print_number(int num)
 {
 	if (num / 10 > 0)
 	{
 		print_number(num / 10);
 	}
-	_putchar(48 + num % 10);
+	return (48 + num % 10);
 }
 
 
