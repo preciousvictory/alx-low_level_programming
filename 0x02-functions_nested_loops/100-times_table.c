@@ -9,11 +9,11 @@
 
 int print_number(int num)
 {
-	if (num / 10 > 0)
+	if ((num) / 10 > 0)
 	{
 		print_number(num / 10);
 	}
-	return (48 + (num % 10));
+	return (num % 10);
 }
 
 
@@ -40,7 +40,7 @@ void print_times_table(int n)
 					putchar(',');
 					putchar(' ');
 					putchar(' ');
-					printf("%d", print_number(m));
+					putchar(48 + print_number(m));
 				}
 				else
 				{
