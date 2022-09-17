@@ -29,5 +29,6 @@ int main(void)
 		num_1 = num_2;
 		num_2 = sum;
 	}
+	putchar('\n');
 	return (0);
 }
