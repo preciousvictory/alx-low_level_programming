@@ -11,12 +11,12 @@ int print_number(int num)
 {
 	int o;
 
-	if ((num / 10) > 0)
+	if ((num / 10) > 9)
 	{
 		o = print_number(num / 10);
 	}
 	putchar(o);
-	return (o);
+	/* return (o); */
 }
 
 
