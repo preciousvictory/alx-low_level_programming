@@ -15,7 +15,7 @@ int _strlen(char *s)
 	{
 		count += 1;
 		s++;
-		printf(" %s ", s[i]);
+		printf(" %s ", s);
 	}
 
 	return (count);
