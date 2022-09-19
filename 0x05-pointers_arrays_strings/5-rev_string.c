@@ -15,11 +15,8 @@ void rev_string(char *s)
 		i++;
 	}
 	j = 0;
-	while (j != (i + 1))
+	while (i--)
 	{
-		l = i
-		*(s + j) = s[l];
-		j++;
-		l--;
+		*(s + j) = *(s + i);		
 	}
 }
