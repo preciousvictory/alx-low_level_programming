@@ -7,9 +7,11 @@
 void _puts(char *str)
 {
 	int i;
+	char d;
 
 	while (str[i])
 	{
-		write(1, &str[i], 1);
+		d = str[i];
+		write(1, &d, 1);
 	}
 }
