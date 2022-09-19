@@ -19,5 +19,5 @@ void puts_half(char *str)
 	{
 		write(1, &str[half_len], 1);
 	}
-	_putchat('\n');
+	_putchar('\n');
 }
