@@ -7,18 +7,16 @@
 
 void rev_string(char *s)
 {
-	int i, j;
+	int i;
 
 	i = 0;
 	while (s[i])
 	{
 		i++;
 	}
-	j = 0; 
 	while (i--)
 	{
-		s[j] = s[i];
-		j++;
+		*s = s[i];
 	}
 	_putchar('\n');
 }
