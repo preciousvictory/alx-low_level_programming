@@ -8,11 +8,17 @@ void print_rev(char *s)
 {
 	int i;
 
-	i = _strlen(s); 
+	i = _strlen(s);
 	while (s[i])
 	{
+		i++
+	}
+
+	int length = i;
+	while (length)
+	{
 		write(1, &s[i], 1);
-		i--;
+		length--;
 	}
 	_putchar('\n');
 }
