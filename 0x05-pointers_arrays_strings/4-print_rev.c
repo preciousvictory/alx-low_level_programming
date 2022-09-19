@@ -16,7 +16,7 @@ void print_rev(char *s)
 	}
 
 	length = i;
-	while (length < 0)
+	while (!(length == 0))
 	{
 		write(1, &s[length], 1);
 		length--;
