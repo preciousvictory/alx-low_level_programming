@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_rev - a function that prints a string, followed by a new line, to stdout.
- * @str: the character
+ * print_rev - a function that prints a string, followed by a 
+ * new line, to stdout.
+ * @s: the character
  */
 void print_rev(char *s)
 {
