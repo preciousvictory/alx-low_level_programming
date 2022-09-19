@@ -24,7 +24,7 @@ void puts_half(char *str)
 		half_len = (i - 1) / 2;
 	}	
 
-	for (j = half_len; j <= half_len; j++)
+	for (j = half_len; str[i] != '\0'; j++)
 	{
 		write(1, &str[j], 1);
 	}
