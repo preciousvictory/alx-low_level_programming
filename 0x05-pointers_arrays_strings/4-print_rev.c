@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _puts - a function that prints a string, followed by a new line, to stdout.
+ * print_rev - a function that prints a string, followed by a new line, to stdout.
  * @str: the character
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
 	int i;
 
-	i = 0; /* _strlen(str); */
+	i = _strlen(str); 
 	while (str[i])
 	{
 		write(1, &str[i], 1);
