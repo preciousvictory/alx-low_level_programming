@@ -5,7 +5,7 @@
  * @s - the character
  */
 
-void _puts(char *str)
+void rev_string(char *s)
 {
 	int i;
 
