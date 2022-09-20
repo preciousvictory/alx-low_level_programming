@@ -12,7 +12,7 @@ void print_number(int n)
 		n = -n;
 		_putchar('-');
 	}
-	_putchar(48 + print_number(n / 10));
+	print_number(n / 10);
 
 	_putchar(48 + n % 10);
 }
