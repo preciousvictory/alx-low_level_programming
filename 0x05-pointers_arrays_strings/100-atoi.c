@@ -29,7 +29,7 @@ int _pow(int a, int b)
 
 int _atoi(char *s)
 {
-	int i, sign, j, num, conv, sum;
+	unsigned int i, sign, j, num, conv, sum;
 
 	j = 0;
 	sign = 1;
