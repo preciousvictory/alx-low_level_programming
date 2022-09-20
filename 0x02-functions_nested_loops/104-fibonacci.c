@@ -9,20 +9,20 @@
 
 int main(void)
 {
-	long long int i, num_1, num_2, sum;
+	unsigned long int i, num_1, num_2, sum;
 
 	num_1 = 1;
 	num_2 = 2;
-	printf("%lld, %lld, ", num_1, num_2);
+	printf("%llu, %llu, ", num_1, num_2);
 
 	for (i = 0; i < 96; i++)
 	{
 		sum = num_1 + num_2;
 
 		if (i == 96)
-			printf("%lld", sum);
+			printf("%llu", sum);
 		else
-			printf("%lld, ", sum);
+			printf("%llu, ", sum);
 
 		num_1 = num_2;
 		num_2 = sum;
