@@ -13,15 +13,16 @@ int main(void)
 
 	num_1 = 1;
 	num_2 = 2;
+	printf("%d, %d, ", num_1, num_2);
 
 	for (i = 0; i < 96; i++)
 	{
 		sum = num_1 + num_2;
 
 		if (i == 96)
-			printf("%ld", sum);
+			printf("%d", sum);
 		else
-			printf("%ld, ", sum);
+			printf("%d, ", sum);
 
 		num_1 = num_2;
 		num_2 = sum;
