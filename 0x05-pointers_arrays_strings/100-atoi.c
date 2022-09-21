@@ -40,13 +40,12 @@ int _atoi(char *s)
 			sign *= -1;
 		}
 
-		if (s[i] >= 48 && s[i] <= 57 && s[i + 1] != ' ')
+		if (s[i] >= 48 && s[i] <= 57)
 		{
 			j++;
 		}
-		else if (s[i] >= 48 && s[i] <= 57 && s[i + 1] == ' ')
+		if (j > 0 && s[i] < 48 && s[i] > 57)
 		{
-			j = j + 1;
 			break;
 		}
 	}
