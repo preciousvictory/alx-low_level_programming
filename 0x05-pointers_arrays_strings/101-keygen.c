@@ -14,7 +14,7 @@ int main(void)
 	srand(time(NULL));
 
 	sum = 0;
-	for (i = 0; i  < 101; i++)
+	while (sum < 2400)
 	{
 		rand_ = rand() % 100;
 		printf("%c", rand_);
