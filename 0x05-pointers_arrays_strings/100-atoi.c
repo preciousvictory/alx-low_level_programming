@@ -40,13 +40,13 @@ int _atoi(char *s)
 			sign *= -1;
 		}
 
+		if (i > 0 && s[i] < 48 && s[i] > 57)
+		{
+			break;
+		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			j++;
-		}
-		if (j > 0 && s[i] < 48 && s[i] > 57)
-		{
-			break;
 		}
 	}
 
