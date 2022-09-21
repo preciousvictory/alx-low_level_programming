@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i, rand_, sum;
+	int rand_, sum;
 
 	srand(time(NULL));
 
