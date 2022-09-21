@@ -9,14 +9,15 @@
 
 int main(void)
 {
-	int i, rand_, sum;
+	int i, sum;
+	char rand_
 	srand(time(NULL));
 
 	sum = 0;
 	for (i = 0; i  < 101; i++)
 	{
 		rand_ = rand() % 100;
-		putchar(rand_ + '0');
+		putchar(rand_);
 		sum += rand_;
 	}
 	putchar(2772 - sum);
