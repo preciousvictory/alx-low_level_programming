@@ -44,6 +44,11 @@ int _atoi(char *s)
 		{
 			j++;
 		}
+		else if (s[i] >= 48 && s[i] <= 57 && s[i + 1] == ' ')
+		{
+			j = j + 1;
+			break;
+		}
 	}
 
 
