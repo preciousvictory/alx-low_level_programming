@@ -7,7 +7,7 @@
  * @n: number of character from src to be added to dest
  *
  * Description: The _strncat function is similar to the _strcat function,
- * except that :- 
+ * except that:-
  * it will use at most n bytes from src; and
  * src does not need to be null-terminated if it contains n or more bytes
  *
@@ -16,7 +16,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j, x;
+	int i, j;
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
@@ -25,14 +25,14 @@ char *_strncat(char *dest, char *src, int n)
 
 	j = i;
 	i = 0;
-	x = 0;
-	while (x < n)
+	while (i != n)
 	{
 		dest[j] = src[i];
 
+		if (src[i] == '\0')
+			break;
 		j++;
 		i++;
-		x++;
 	}
 
 	return (dest);
