@@ -9,7 +9,12 @@
 
 int main(void)
 {
+	int i;
 	srand(time(0));
-	printf("%d\n", rand()); 
+
+	for (i = 0; i  < 10; i++)
+	{
+		printf("%d\n", rand());
+	}
 	return (0);
 }
