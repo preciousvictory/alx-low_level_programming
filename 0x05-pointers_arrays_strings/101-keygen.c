@@ -13,13 +13,13 @@ int main(void)
 
 	srand(time(NULL));
 
-	sum = 0;
-	while (sum < 2400)
+	sum = 2772;
+	while (sum > 122)
 	{
 		rand_ = rand() % 100;
+		sum -= rand_;
 		printf("%c", rand_);
-		sum += rand_;
 	}
-	printf("%c", (2772 - sum));
+	printf("%c", sum);
 	return (0);
 }
