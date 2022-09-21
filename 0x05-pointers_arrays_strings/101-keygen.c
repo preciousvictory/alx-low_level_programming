@@ -9,12 +9,13 @@
 
 int main(void)
 {
-	int i;
+	int i, rand_;
 	srand(time(0));
 
-	for (i = 0; i  < 10; i++)
+	for (i = 0; i  < 101; i++)
 	{
-		printf("%d\n", rand());
+		rand_ = rand() % 100;
+		putchar(rand_ + '0');
 	}
 	return (0);
 }
