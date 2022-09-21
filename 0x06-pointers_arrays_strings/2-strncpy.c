@@ -4,8 +4,13 @@
  * _strncpy - a function that copies a string.
  * @dest: first string
  * @src: second string
- * @n: number of character from src to be added to dest
+ * @n: number of bytes from src to be added to dest
  *
+ * Description: The function copies the at most n bytes from src
+ * and replaces it starting fromthe first item in dest.
+ * if the number of bytes is far more than the lenght of string src
+ * it replaces the rest of the string with '\0' until it reaches n bytes
+ * 
  * Return: a pointer to the resulting string dest
  */
 
