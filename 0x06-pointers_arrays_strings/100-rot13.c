@@ -19,11 +19,12 @@ char *rot13(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		n = 0;
-		while (input[n] != '\0')
+		while (n < 52)
 		{
 			if (s[i] == input[n])
 			{
 				s[i] = output[n];
+				break;
 			}
 
 			n++;
