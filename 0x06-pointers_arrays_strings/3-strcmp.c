@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * int _strcmp(char *s1, char *s2) - a function that compares two strings.
+ * _strcmp - a function that compares two strings.
  * @s1: first string
  * @s2: second string
  *
  * Description: the function compares s1 and s2 strings character by character
- * 
  * Return: --
  * if the first non-matching character in s1 is greater in ASCII than of s2.
  * if the first non-matching character in s1 is lower (in ASCII) than of s2.
