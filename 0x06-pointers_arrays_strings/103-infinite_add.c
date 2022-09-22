@@ -20,11 +20,14 @@ int len(char *str)
  * add_string - it adds two numbers that are string
  * @n1: the first number
  * @n2: second number
+ * @r: the string to return
+ *
+ * Return: r - addition of n1 and n2
  */
-char add_string(char *n1, char *n2)
+char *add_string(char *n1, char *n2, char *r)
 {
 	int num_1, num_2, add, l1, l2, rr = 0, j = 0;
-	
+
 	l1 = len(n1) - 1, l2 = len(n2) - 1;
 	while (l1 >= 0 && l2 >= 0)
 	{
@@ -76,16 +79,14 @@ char add_string(char *n1, char *n2)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int num_1, num_2, add, l1, l2, rr = 0, j = 0, len_;
+	int j = 0, len_;
 	char temp;
 
 	size_r--;
-	l1 = len(n1) - 1;
-	l2 = len(n2) - 1;
 	if (len(n1) > size_r || len(n2) > size_r)
 		return (0);
 
-	*r = add_string(n1, n2);
+	r = add_string(n1, n2, r);
 
 	if (len(r) > size_r)
 		return (0);
