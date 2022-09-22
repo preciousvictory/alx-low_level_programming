@@ -1,32 +1,30 @@
 #include "main.h"
-		
+#include <limits.h>
+
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-
 int main(void)
 {
-	char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
-	char *p;
+	print_number(98);
+	_putchar('\n');
 
-	p = rot13(s);
-	printf("%s", p);
-	printf("------------------------------------\n");
-	printf("%s", s);
-	printf("------------------------------------\n");
+	print_number(1024);
+	_putchar('\n');
 
-	p = rot13(s);
-	printf("%s", p);
-	printf("------------------------------------\n");
-	printf("%s", s);
-	printf("------------------------------------\n");
+	print_number(402);
+	_putchar('\n');
 
-	p = rot13(s);
-	printf("%s", p);
-	printf("------------------------------------\n");
-	printf("%s", s);
+	print_number(-98);
+	_putchar('\n');
+
+	print_number(0);
+	_putchar('\n');
+
+	print_number(INT_MIN);
+	_putchar('\n');
 
 	return (0);
 }
