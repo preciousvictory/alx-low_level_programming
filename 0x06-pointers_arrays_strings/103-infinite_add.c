@@ -16,28 +16,16 @@ int len(char *str)
 	return (l);
 }
 
-
 /**
- * infinite_add - a function that adds two numbers.
- * @n1: first number
+ * add_string - it adds two numbers that are string
+ * @n1: the first number
  * @n2: second number
- * @r: is the buffer that the function will use to store the result
- * @size_r: is the buffer size
- *
- * Return: returns r - pointer to the result
  */
-
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+char add_string(char *n1, char *n2)
 {
-	int num_1, num_2, add, l1, l2, rr = 0, j = 0, len_;
-	char temp;
-
-	size_r--;
-	l1 = len(n1) - 1;
-	l2 = len(n2) - 1;
-	if (len(n1) > size_r || len(n2) > size_r)
-		return (0);
-
+	int num_1, num_2, add, l1, l2, rr = 0, j = 0;
+	
+	l1 = len(n1) - 1, l2 = len(n2) - 1;
 	while (l1 >= 0 && l2 >= 0)
 	{
 		num_1 = n1[l1] - 48;
@@ -71,8 +59,33 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		r[j] = rr + 48;
 	}
-
 	r[j + 1] = '\0';
+	return (r);
+}
+
+
+/**
+ * infinite_add - a function that adds two numbers.
+ * @n1: first number
+ * @n2: second number
+ * @r: is the buffer that the function will use to store the result
+ * @size_r: is the buffer size
+ *
+ * Return: returns r - pointer to the result
+ */
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+	int num_1, num_2, add, l1, l2, rr = 0, j = 0, len_;
+	char temp;
+
+	size_r--;
+	l1 = len(n1) - 1;
+	l2 = len(n2) - 1;
+	if (len(n1) > size_r || len(n2) > size_r)
+		return (0);
+
+	*r = add_string(n1, n2);
 
 	if (len(r) > size_r)
 		return (0);
