@@ -58,7 +58,7 @@ char *add_string(char *n1, char *n2, char *r)
 		l2--;
 		j++;
 	}
-	if (l1 < 0 && l2 < 0)
+	if (l1 < 0 && l2 < 0 && rr > 0)
 	{
 		r[j] = rr + 48;
 	}

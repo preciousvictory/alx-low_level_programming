@@ -10,7 +10,6 @@
  * and replaces it starting fromthe first item in dest.
  * if the number of bytes is far more than the lenght of string src
  * it replaces the rest of the string with '\0' until it reaches n bytes
- * 
  * Return: a pointer to the resulting string dest
  */
 
