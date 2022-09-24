@@ -37,12 +37,14 @@ void print_buffer(char *b, int size)
 			}
 			if (j < size)
 				printf("%02x", b[j]);
+			else
+				printf("  ");
 		}
 
 		printf(" ");
 		for (j = i; j < i + 10; j++)
 		{
-			if (size <= j) 
+			if (size <= j)
 				break;
 			if (b[j] < 32 || b[j] > 126)
 			{
