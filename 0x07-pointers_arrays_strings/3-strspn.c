@@ -4,7 +4,7 @@
  * _strspn - a function that gets the length of a prefix substring.
  * @s: string tobe checked
  * @accept: contains accepted strings
- * 
+ *
  * Return: the number of bytes in the initial segment of s which consist only
  * of bytes from accept
  */
