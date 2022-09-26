@@ -8,7 +8,7 @@
  * @dest: memory area
  * @src:array to be copied
  *
- * Returns: a pointer to dest
+ * Return: a pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
