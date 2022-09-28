@@ -5,7 +5,7 @@
  * @n: the number
  * @l: loop
  *
- * Returns the square root
+ * Return: the square root
  */
 
 int _sqrt(int n, int l)
