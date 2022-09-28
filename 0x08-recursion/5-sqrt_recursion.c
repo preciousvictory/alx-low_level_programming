@@ -31,6 +31,6 @@ int _sqrt_recursion(int n)
 	if (n == 1)
 		return (1);
 	if (n > 1)
-		return (_sqrt(n , 2));
+		return (_sqrt(n, 2));
 	return (-1);
 }
