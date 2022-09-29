@@ -39,7 +39,7 @@ int check(char *s, int i, int len)
 		if (l / 2 == (i + 1))
 			return (1);
 		else
-			return (check(s, i + 1, len -1));
+			return (check(s, i + 1, len - 1));
 	}
 	return (0);
 }
