@@ -17,13 +17,14 @@
 char *_strdup(char *str)
 {
 	char *ar;
-	int i;
+	int i, l;
 
-	ar = malloc(strlen(str));
+	l = strlen(str);
+	ar = malloc(l);
+
 	if (ar == NULL)
 		return (NULL);
-
-	for (i = 0; i < strlen(str))
+	for (i = 0; i < l; i++)
 	{
 		ar[i] == str[i]
 	}
