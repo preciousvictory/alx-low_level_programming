@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		if (atoi(argv[1] < 0))
+		if (atoi(argv[1]) < 0)
 		{
 			printf("0\n");
 			return (0);
@@ -49,12 +49,11 @@ int main(int argc, char *argv[])
 				count++;
 			}
 			while (i >= 10)
-
 			{
 				i -= 10;
 				count++;
 			}
-			while (i >= 5);
+			while (i >= 5)
 			{
 				i -= 5;
 				count++;
