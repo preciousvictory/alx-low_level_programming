@@ -3,7 +3,7 @@
 /**
  * _strdup - a function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter.
- * @str: 
+ * @str: string 
  *
  * - The _strdup() function returns a pointer to a new string which is a
  *   duplicate of the string str. Memory for the new string is obtained
@@ -19,8 +19,11 @@ char *_strdup(char *str)
 	char *ar;
 	int i, l;
 
+	if (str == NULL)
+		return (NULL);
+
 	l = strlen(str);
-	ar = malloc(l);
+	ar = malloc(l + 1);
 
 	if (ar == NULL)
 		return (NULL);
