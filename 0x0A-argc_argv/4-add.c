@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int c, add = 0;
+	int c, j, add = 0;
 
 	if (argc == 1)
 		printf("0\n");
@@ -18,21 +18,23 @@ int main(int argc, char *argv[])
 	{
 		for (c = 1; c < argc; c++)
 		{
-			if (isdigit(argv[c][0]))
+			j = 0;
+
+			while (argv[c][j])
 			{
-				add = add + atoi(argv[c]);
+				if (!isdigit(argv[c][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+				j++;
 			}
-			else
-			{
-				add = add * 0;
-				break;
-			}
+
+			add = add + atoi(argv[c]);
 		}
 
 		if (add > 0)
 			printf("%d\n", add);
-		else
-			printf("Error\n");
 	}
 
 	return (0);
