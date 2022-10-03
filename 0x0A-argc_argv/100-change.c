@@ -1,6 +1,47 @@
 #include "main.h"
 
 /**
+ * sub - a function that substracts the closest coin values to the number
+ * @num: the number
+ *
+ * Return: the count
+ */
+
+int sub(int num)
+{
+	int count = 0;
+
+	while (num >= 25)
+	{
+		num -= 25;
+		count++;
+	}
+	while (num >= 10)
+	{
+		num -= 10;
+		count++;
+	}
+	while (num >= 5)
+	{
+		num -= 5;
+		count++;
+	}
+	while (num >= 2)
+	{
+		num -= 2;
+		count++;
+	}
+	while (num >= 1)
+	{
+		num -= 1;
+		count++;
+	}
+
+	return (count);
+
+}
+
+/**
  * main - a program that prints the minimum number of coins to make change
  * for an amount of money.
  * @argc: argument count
@@ -26,7 +67,7 @@
 
 int main(int argc, char *argv[])
 {
-	int count = 0, i;
+	int i, s;
 
 	if (argc != 2)
 	{
@@ -43,34 +84,9 @@ int main(int argc, char *argv[])
 		else
 		{
 			i = atoi(argv[1]);
-			while (i >= 25)
-			{
-				i -= 25;
-				count++;
-			}
-			while (i >= 10)
-			{
-				i -= 10;
-				count++;
-			}
-			while (i >= 5)
-			{
-				i -= 5;
-				count++;
-			}
-			while (i >= 2)
-			{
-				i -= 2;
-				count++;
-			}
-
-			while (i >= 1)
-			{
-				i -= 1;
-				count++;
-			}
+			s = sub(i);
 		}
-		printf("%d\n", count);
+		printf("%d\n", s);
 	}
 
 	return (0);
