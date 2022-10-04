@@ -15,7 +15,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i;
+	int i, len, s;
 	char *ar;
 
 	len = strlen(s1) + strlen(s2) + 1;
