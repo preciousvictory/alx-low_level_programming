@@ -33,6 +33,7 @@ int **alloc_grid(int width, int height)
 		ar[i] =  malloc(w_len);
 		if (ar[i] == NULL)
 		{
+			/* Free memory if malloc fail */
 			while (i--)
 				free(ar[i]);
 			free(ar);
