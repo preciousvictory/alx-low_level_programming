@@ -14,40 +14,44 @@
 
 char **strtow(char *str)
 {
-	char *strw;
-	int i, s, e;
-	
-	if (str == NULL || str == "")
+	char **strw;
+	int i = 0, j, p = 0, l, n;
+
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
+	l = strlen(str);
+	strw = malloc(l * sizeof(char *));
+	if (strw == NULL)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			s = i;
-			break;	
-		}
-	}
-	for (i = s; str[i] != '\0'; i++)
-	{
-		if (str[i] == " " && str[i + 1] == " ")
-		{
-			e = i;
-		}
+		free(strw);
+		return (NULL);
 	}
 
-	i = 0;
-	while (s <= e):
+	while (str[i] != '\0')
 	{
-		if (str[s] == " ")
+		if (str[i] != ' ' && str[i - 1] == ' ')
 		{
-			strw[i] = '\0';
+			j = 1;
+			while (str[i + j] != ' ')
+				j++;
+			strw[p] = malloc(j * sizeof(char));
+			if (strw[p] == NULL)
+			{
+				while (p--)
+					free(strw[p]);
+				free(strw);
+				return (NULL);
+			}
+			for (n = 0; n < j; n++)
+				strw[p][n] = str[i + n];
+			strw[p][n] = '\0';
+			p++;
+			i += j;
 		}
-		strw[i] = str[s];
-
-		i++;
-		s++;
+		else
+			i++;
 	}
-
+	strw[p] = NULL;
 	return (strw);
 }
