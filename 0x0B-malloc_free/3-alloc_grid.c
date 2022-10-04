@@ -13,7 +13,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int *ar;
+	int **ar;
 	int i, len;
 
 	len = width * height + 1;
