@@ -40,12 +40,12 @@ char *argstostr(int ac, char **av)
 			free(str);
 		}
 
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; j < w_len; j++)
 		{
+			if (av[i][j] == '\0')
+				break;
 			str[i][j] = av[i + 1][j];
 		}
-		str[i][j + 1] = '\n';
-		str[i][j + 2] = '\0';
 	}
 	return (*str);
 }
