@@ -9,7 +9,7 @@
  * Note that we will compile with your alloc_grid.c file. Make sure it compiles.
  */
 
-void free_grid(int **grid, int height);
+void free_grid(int **grid, int height)
 {
 
 	free(grid);
