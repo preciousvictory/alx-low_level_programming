@@ -6,7 +6,7 @@
  * @grid: grid
  * @height: grid's height
  *
- * Note that we will compile with your alloc_grid.c file. Make sure it compiles.
+ * Note that we will compile with your alloc_grid.c file. Make sure it compiles
  */
 
 void free_grid(int **grid, int height)
