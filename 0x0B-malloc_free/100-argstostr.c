@@ -44,7 +44,7 @@ char *argstostr(int ac, char **av)
 		{
 			if (av[i][j] == '\0')
 				break;
-			str[i][j] == av[i][j];
+			str[i][j] = av[i][j];
 		}
 		str[i][j + 1] = '\n';
 	}
