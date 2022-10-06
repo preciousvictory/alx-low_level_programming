@@ -15,6 +15,10 @@ int main(void)
 	printf("%s\n", concat);
 	free(concat);
 
+	concat = string_nconcat(NULL, NULL, 3);
+	printf("%s\n", concat);
+	free(concat);
+
 	concat = string_nconcat("Best ", "School !!!", 6);
 	printf("%s\n", concat);
 	free(concat);
