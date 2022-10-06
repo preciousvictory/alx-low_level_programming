@@ -17,21 +17,18 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int nlen, l1, l2, i, j;
+	unsigned int nlen, l1, l2, i, j;
 	char *string;
 
-	if (s1 != NULL || s2 != NULL)
-	{
-		l1 = strlen(s1);
-		l2 = strlen(s2);
-	}
-	else
-	{
-		l1 = 0;
-		l2 = 0;
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	if (n >= strlen(s2))
+	l1 = strlen(s1);
+	l2 = strlen(s2);
+
+	if (n >= l2)
 		nlen = l1 + l2 + 1;
 	else
 		nlen = l1 + n + 1;
