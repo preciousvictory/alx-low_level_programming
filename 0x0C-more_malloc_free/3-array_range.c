@@ -32,5 +32,5 @@ int *array_range(int min, int max)
 		range[i] = j;
 		j++;
 	}
-	return (range);	
+	return (range);
 }
