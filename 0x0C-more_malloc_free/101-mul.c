@@ -12,15 +12,19 @@
  * - num1 and num2 will be passed in base 10
  * - Print the result, followed by a new line
  */
-void mul(char *n1, int l1, char *n2, int l2)
+void *mul(char *n1, int l1, char *n2, int l2)
 {
-	int i;
+	int i, multiply;
 	char *sol;
 	printf("%s, %s", n1, n2);
 
+	(void) multiply;
 	sol = malloc(l1 + l2 + 1);
 	if (sol == NULL)
 		return (NULL);
+
+	for (i = 0; i < (l1 + l2 + 1); i++)
+		sol[i] = '0';
 
 	i = 0;
 	while (i < l1)
@@ -28,6 +32,8 @@ void mul(char *n1, int l1, char *n2, int l2)
 		multiply = n1[i] * n2[i];
 
 	}
+
+	return (sol);
 }
 
 /**
@@ -41,7 +47,7 @@ int _isdigit(char **argv)
 	int i, j, s;
 
 	s = 0;
-	for (i = 0; i < 3; i++)
+	for (i = 1; i < 3; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
