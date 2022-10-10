@@ -1,3 +1,6 @@
+#ifndef DOG_FILE
+#define DOG_FILE
+
 /**
  * struct dog - a new type
  * @name: name
@@ -11,3 +14,7 @@ struct dog
 	float age;
 	char *owner;
 };
+
+
+
+#endif /* DOG_FILE */
