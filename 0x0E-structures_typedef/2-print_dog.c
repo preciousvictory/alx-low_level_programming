@@ -1,11 +1,11 @@
 #include "dog.h"
 /**
- * 2-print_dog.c -  a function that prints a struct dog
+ * print_dog -  a function that prints a struct dog
  * @d: pointer to struct dog
  */
 void print_dog(struct dog *d)
 {
-	if (d != NULL)
+	if (d)
 	{
 		if (d->name != NULL)
 			printf("Name: %s\n", d->name);
