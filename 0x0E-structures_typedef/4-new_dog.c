@@ -1,10 +1,12 @@
 #include "dog.h"
 /**
- * new_dog -  a function that creates a new dog.
- * 
+ * new_dog - a function that creates a new dog.
+ *
  * @name: pointer to the name of dog string
  * @age: age variable
- * @owner: point to the name of owner string
+ * @owner: point to the name of owner stringi
+ *
+ * Return: the new dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -17,9 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	my_dog = malloc(sizeof(*my_dog));
 	if (my_dog == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; *name++; i++)
 		;
@@ -28,17 +28,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	my_dog->name = malloc((i + 1) * sizeof(char));
 	if (my_dog->name == NULL)
-	{
-		free(my_dog->name);
 		return (NULL);
-	}
 
 	my_dog->owner = malloc((j + 1) * sizeof(char));
 	if (my_dog->owner == NULL)
-	{
 		return (NULL);
-	}
-	
 
 	for (l = 0; l < i; l++)
 	{
