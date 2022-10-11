@@ -1,4 +1,27 @@
 #include "dog.h"
+
+/**
+ * copy - to copy string
+ * @str: new string
+ * @i: length of string s
+ * @s: to copy from
+ *
+ * Return: str
+ */
+
+char *copy(char *str, int i, char *s)
+{
+	int l;
+
+	for (l = 0; l < i; l++)
+	{
+		str[i] =  s[i];
+	}
+
+	str[l] = '\0';
+
+	return (str);
+}
 /**
  * new_dog - a function that creates a new dog.
  *
@@ -12,7 +35,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *my_dog;
-	int i, j, l;
+	int i, j;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
@@ -34,19 +57,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (my_dog->owner == NULL)
 		return (NULL);
 
-	for (l = 0; l < i; l++)
-	{
-		my_dog->name[i] =  name[i];
-	}
-	my_dog->name[l] = '\0';
+	copy(my_dog->name, i, name);
 
 	my_dog->age = age;
 
-	for (l = 0; l < j; l++)
-	{
-		my_dog->owner[j] = owner[i];
-	}
-	my_dog->owner[l] = '\0';
+	copy(my_dog->owner, j, owner);
 
 	return (my_dog);
 }
