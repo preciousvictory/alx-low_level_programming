@@ -51,10 +51,12 @@ void print_string(va_list str)
 	char *s;
 
 	s = va_arg(str, char *);
-	if (s != NULL)
-		printf("%s", s);
-	else
+	if (s == NULL)
+	{
 		printf("(nil)");
+		exit (0);
+	}
+	printf("%s", s);
 }
 
 /**
@@ -72,6 +74,7 @@ void print_all(const char * const format, ...)
 {
 	va_list str;
 	int i, l;
+	char *separator = "";
 	p_all next[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -89,13 +92,12 @@ void print_all(const char * const format, ...)
 		i = 0;
 		while (i < 4 && *next[i].p != format[l])
 			i++;
-		if (next[i].print != NULL)
+		if (next[i].print != NULL && l < 4)
 		{
+			printf("%s", separator);
 			func = next[i].print;
 			func(str);
-
-			if (l != 3)
-				printf(", ");
+			separator = ", ";
 		}
 		l++;
 	}
