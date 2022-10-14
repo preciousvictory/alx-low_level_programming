@@ -54,7 +54,7 @@ void print_string(va_list str)
 	if (s == NULL)
 	{
 		printf("(nil)");
-		exit (0);
+		return;
 	}
 	printf("%s", s);
 }
@@ -87,12 +87,12 @@ void print_all(const char * const format, ...)
 	va_start(str, format);
 
 	l = 0;
-	while (format[l] != '\0')
+	while (format != NULL && format[l] != '\0')
 	{
 		i = 0;
 		while (i < 4 && *next[i].p != format[l])
 			i++;
-		if (next[i].print != NULL && l < 4)
+		if (i < 4)
 		{
 			printf("%s", separator);
 			func = next[i].print;
