@@ -1,4 +1,4 @@
-#define LISTS_H
+#ifndef LISTS_H
 #define LISTS_H
 
 #include <stdio.h>
@@ -19,6 +19,7 @@ typedef struct list_s
 } list_t;
 
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 
 #endif /* LISTS_H */
