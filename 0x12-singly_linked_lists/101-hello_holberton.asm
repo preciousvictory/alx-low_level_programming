@@ -13,5 +13,5 @@ main:
 	call printf
 
 	mov  ebx, 0
-	mov  eax, 1
+	mov  eax, 0
 	ret
