@@ -1,0 +1,16 @@
+	SECTION .text
+	extern printf
+	global main
+
+	SECTION .data
+msg  db  'Hello, Holberton\n',0
+fmt db "%s", 10, 0
+
+main:
+	mov  esi, msg
+	mov  edi, fmt
+	mov  eax, 0
+	call printf
+
+	mov  eax, 1
+	ret
