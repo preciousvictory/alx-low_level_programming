@@ -12,5 +12,6 @@ main:
 	mov  eax, 0
 	call printf
 
+	mov  ebx, 0
 	mov  eax, 1
 	ret
