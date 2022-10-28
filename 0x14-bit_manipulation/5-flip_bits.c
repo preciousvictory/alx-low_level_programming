@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int count = 0, i;
 	/* ^ returns 1 if either of the two numbers are not the same */
-	unsigned long int checking = n ^ m; 
+	unsigned long int checking = n ^ m;
 
 	for (i = 0; checking > 0; i++)
 	{
