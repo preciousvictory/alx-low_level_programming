@@ -28,27 +28,26 @@ unsigned int raise_to_pow(unsigned int pow)
  * @b:  is pointing to a string of 0 and 1 chars
  *
  * Return: the converted number, or 0 if
- * 	- there is one or more chars in the string b that is not 0 or 1
- * 	- b is NULL
+ * - there is one or more chars in the string b that is not 0 or 1
+ * - b is NULL
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0, i, pow = strlen(b) - 1;
+	unsigned int num = 0, i, pow;
 	char s[3];
 
 	if (b == NULL)
 		return (0);
 
+	pow = strlen(b) - 1;
 	for (i = 0; i < strlen(b); i++)
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-		else
-		{
-			s[0] = b[i];
-			num += atoi(s) * raise_to_pow(pow);
-			pow--;
-		}
+
+		s[0] = b[i];
+		num += atoi(s) * raise_to_pow(pow);
+		pow--;
 	}
 
 	return (num);
