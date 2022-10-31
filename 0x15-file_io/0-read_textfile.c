@@ -32,9 +32,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 		return (0);
-	
+
 	r = read(fd, buf, letters);
-	
+
 	n = write(STDOUT_FILENO, buf, r);
 
 	close(fd);
