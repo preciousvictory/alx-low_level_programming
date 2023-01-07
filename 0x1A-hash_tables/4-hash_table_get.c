@@ -23,7 +23,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		{
 			return (item->value);
 		}
-		item = ite->next;
+		item = item->next;
 	}
 	return (NULL);
 }
