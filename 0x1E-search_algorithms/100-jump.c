@@ -1,13 +1,4 @@
 #include "search_algos.h"
-
-int min(int a, int b)
-{
-    	if(b > a)
-		return a;
-  	else
-	  	return b;
-}
-
 /**
  * jump_search - a function that searches for a value in a sorted array of
  * integers using the Jump search algorithm
@@ -23,42 +14,36 @@ int min(int a, int b)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	/* Finding block size to be jumped */
-	size_t step = sqrt(size), prev = 0;
+	size_t i, jump, step;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
+	step = sqrt(size);
 	/* Finding the block where element is present (if it is present) */
-	while (array[min(step, size) - 1] < value)
-    	{
-		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-		prev = step;
-		step += sqrt(size);
-    	}
-
-	printf("Value found between indexes [%ld] and [%ld]\n", prev - (int)sqrt(size), prev);
-
-	/* Doing a linear search for x in block beginning with prev. */
-	while (array[prev] < value)
-    	{
-		prev++;
-
-		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-		
-		/*
-		 * If we reached next block or end of array,
-		 * element is not present
-		 */
-		if ((int)prev == min(step, size))
-	    		return (-1);
-    	}
- 
-	/* If element is found */
-    	if (array[prev] == value)
+	for (i = jump = 0; jump < size && array[jump] < value;)
 	{
-		return prev;
+		printf("Value checked array[%ld] = [%d]\n", jump, array[jump]);
+		i = jump;
+		jump += step;
 	}
-    
-	return -1;
+
+	printf("Value found between indexes [%ld] and [%ld]\n", i, jump);
+
+	if (jump < size - 1)
+		jump = jump;
+	else
+		jump = size - 1;
+
+	for (; i < jump && array[i] < value; i++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+	}
+
+	printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+
+	if (array[i] == value)
+		return (value);
+
+	return (-1);
 }
